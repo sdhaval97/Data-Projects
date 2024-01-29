@@ -18,6 +18,6 @@ If you have any suggestions, improvements, or would like to collaborate on a pro
 
 ## Contact
 
-Connect with me on [[LinkedIn](https://www.linkedin.com/in/dhaval-vipin-shah/)](your_linkedin_profile) to stay updated on my data journey and explore potential collaborations.
+Connect with me on [LinkedIn](https://www.linkedin.com/in/dhaval-vipin-shah/) to stay updated on my data journey and explore potential collaborations.
 
 Happy coding! 🚀
