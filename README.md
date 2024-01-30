@@ -1,4 +1,4 @@
-# Data Projects Repository
+# Data Analysis Projects
 
 ## Introduction
 
