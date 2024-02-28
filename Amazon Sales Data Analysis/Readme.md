@@ -1,4 +1,4 @@
-# Sales Data Analysis
+# Amazon Sales Data Analysis
 
 This repository contains SQL script and the dataset for analyzing sales data from Amazon during the AMJ quarter.
 
