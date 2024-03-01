@@ -17,7 +17,13 @@ balance <- cumsum(ifelse(transaction_type == "Deposit", amount, -amount))
 # Additional variables
 income <- round(runif(200, min = 20000, max = 150000), 2)
 credit_score <- sample(300:850, 200, replace = TRUE)
-loan_status <- sample(c("Approved", "Pending", "Rejected"), 200, replace = TRUE)
+loan_status <- case_when(
+  credit_score >= 300 & credit_score < 550 ~ "Rejected",
+  credit_score >= 550 & credit_score < 700 ~ "Pending",
+  credit_score >= 700 & credit_score < 800 ~ "Approved",
+  credit_score >= 800 & credit_score <= 850 ~ "Approved",
+  TRUE ~ NA_character_
+)
 
 # Create Data Frame
 bank_data <- data.frame(Customer_ID = customer_id,
@@ -73,6 +79,13 @@ pie_chart <- ggplot(bank_data, aes(x = "", fill = Account_Type)) +
   coord_polar("y", start = 0) +
   labs(title = "Distribution of Account Types") +
   geom_text(aes(label = stat(count)), stat = "count", position = position_stack(vjust = 0.5))
+
+# Pie chart for loan status proportion
+pie_loan_status <- ggplot(bank_data, aes(x = "", fill = Loan_Status)) +
+  geom_bar(width = 1) +
+  coord_polar("y", start = 0) +
+  geom_text(aes(label = ..count..), stat = "count", position = position_stack(vjust = 0.5)) +
+  labs(title = "Proportion of Loan Status")
 
 # Bar Chart
 bar_chart <- ggplot(bank_data, aes(x = Account_Type, y = Amount, fill = Account_Type)) +
