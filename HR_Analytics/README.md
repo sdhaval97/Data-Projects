@@ -27,7 +27,7 @@ Refined the report’s aesthetics to align with corporate branding, ensuring a c
 
 To view the Power BI report and explore the analysis:
 
-1. Open the Power BI file (HR_Analytics_Dashboard.pbix) in Power BI Desktop.
+1. Open the Power BI file (`HR_Analytics_Dashboard.pbix`) in Power BI Desktop.
 
 2. Explore the report and interact with the visualizations to gain insights into the HR data.
 
